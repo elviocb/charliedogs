@@ -17,3 +17,8 @@ app.use(parser.json());
 
 // Configure server
 app.use(express.static(config.static_site_root));
+
+// Server listening
+app.listen(config.port, function(){
+  console.log('Server running on port', config.port);
+})
