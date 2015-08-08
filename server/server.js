@@ -7,16 +7,16 @@ var config  = require('./server-config'),
 var morgan = require('morgan');
 var parser = require('body-parser');
 
-// Router
-var router = require('./routes.js');
-
 // Logging and parsing
 app.use(morgan('dev'));
 app.use(parser.json());
 
-
 // Configure server
 app.use(express.static(config.static_site_root));
+
+// Router
+var routes = require('./routes.js');
+routes(app);
 
 // Server listening
 app.listen(config.port, function(){

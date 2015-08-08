@@ -1,5 +1,7 @@
 'use strict'
 
-var router = require('express').Router();
-
-module.exports = router;
+module.exports = function(app){
+  app.get('/', function(req, res, next){
+    res.status(200).json('Helllllloooooooo');
+  });
+};
