@@ -1,10 +1,29 @@
-<div class="row">
-  <div ng-repeat="dog in fakeData track by $index" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
-       <img src={{dog.thumb}} class="thumbnail">
-       <h3>Raça: {{dog.race}}</h3>
-       <h3>Idade: {{dog.age}}</h3>
-       <h3>Cor: R$ {{dog.color}}</h3>
-       <h3>Preço: R$ {{dog.price}}</h3>
-       <button>Adicionar ao carrinho</button> 
+<section>
+  <div class="row">
+    <div class="col-lg-3">
+      Buscar: <input ng-model="search"type="search" class="form-control" placeholder="buscar">
+    </div>
+    <div>
+      Ordenar por raça:
+      <select ng-model="orderList">
+        <option value="race">Beagle</option>
+        <option value="race">Boxer</option>
+        <option value="race">Bulldog</option>
+        <option value="race">Dalmata</option>
+        <option value="race">Husk </option>
+        <option value="race">Maltês</option>
+      </select>
+    </div>
   </div>
-</div>
+
+  <div class="row">
+    <div ng-repeat="dog in fakeData | filter:search" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+         <img src={{dog.thumb}} class="thumbnail">
+         <h3>Raça: {{dog.race}}</h3>
+         <h3>Idade: {{dog.age}}</h3>
+         <h3>Cor: R$ {{dog.color}}</h3>
+         <h3>Preço: R$ {{dog.price}}</h3>
+         <button>Adicionar ao carrinho</button> 
+    </div>
+  </div> 
+</section>

@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ecommerce for dogs">
     <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>Charlie Dogs | Buy your puppy now!</title>
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body ng-controller="AppCtrl">
+  <body>
+    <div ng-controller="NavBarCtrl">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ui-sref="home">Charlie's Dogs</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-shopping-cart"></i>Carrinho</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+    </div>
+
+    <!-- partials -->
     <div>
       <h1>Charlie Dogs Ecommerce<h1/>
     </div>
+   
     <div ui-view="dogpanel"></div>
+
     <!-- inject:js -->
     <script src="angular.min.js"></script>
     <script src="angular-ui-router.js"></script>
     <script src="ui-bootstrap-tpls.min.js"></script>
 
+    <script src="app/navbar/ui-navbar.js"></script>
+    <script src="app/navbar/nav-bar.js"></script>
     <script src="app/dogpanel/dog-panel.js"></script>
     <script src="app/app.js"></script>
     <!-- endinject -->

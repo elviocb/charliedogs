@@ -25,7 +25,8 @@
   angular
     .module('app', [
       'ui.router',
-      'app.dog-panel'
+      'app.dog-panel',
+      'app.nav-bar'
   ])
     .config(AppConfig)
     .controller('AppCtrl', AppCtrl);
