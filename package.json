@@ -5,8 +5,9 @@
   "main": "gulpfile.js",
   "dependencies": {
     "body-parser": "^1.13.3",
-    "morgan": "^1.6.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "morgan": "^1.6.1"
   },
   "devDependencies": {},
   "scripts": {
