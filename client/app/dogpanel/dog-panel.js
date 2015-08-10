@@ -51,6 +51,7 @@
 
   angular.module('app.dog-panel', [
     'ui.router',
+    'ui.bootstrap'
   ])
   .controller('DogPanelCtrl', DogPanelCtrl);
 

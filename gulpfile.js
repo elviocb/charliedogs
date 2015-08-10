@@ -27,7 +27,9 @@ gulp.task('copy', [], function copyMediaFiles (cb) {
     '!'+ config.client +'/assets/styles/**/*',
     config.client +'/**/*',
     'bower_components/angular/angular.min.js', 
-    'bower_components/angular-ui-router/release/angular-ui-router.js'
+    'bower_components/angular-ui-router/release/angular-ui-router.js',
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'
   ];
   // var vendors = ['bower_components/angular/angular.min.js', 'bower_components/angular-ui-router/release/angular-ui-router.js'];
 
