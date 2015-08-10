@@ -23,8 +23,10 @@
     
   };
 
-  angular.module('App', [
-    'ui.router'
+  angular
+    .module('app', [
+      'ui.router',
+      'app.dog-panel'
   ])
     .config(AppConfig)
     .controller('AppCtrl', AppCtrl);
