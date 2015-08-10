@@ -20,7 +20,6 @@
   };
 
   var AppCtrl = function($scope) {
-    
   };
 
   angular

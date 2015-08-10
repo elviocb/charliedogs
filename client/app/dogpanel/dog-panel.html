@@ -1,9 +1,8 @@
-<div>
-  <ul>
-    <li>a</li>
-    <li>b</li>
-    <li>c</li>
-    <li>d</li>
-    <li>e</li>
-  </ul>
+<div ng-repeat="dog in fakeData track by $index">
+  <img src={{dog.thumb}}>
+  <h3>Raça: {{dog.race}}</h3>
+  <h3>Idade: {{dog.age}}</h3>
+  <h3>Cor: R$ {{dog.color}}</h3>
+  <h3>Preço: R$ {{dog.price}}</h3>
+  <button>Adicionar ao carrinho</button>
 </div>
