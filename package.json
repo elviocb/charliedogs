@@ -1,0 +1,25 @@
+{
+  "name": "charliedogs",
+  "version": "0.0.0",
+  "description": "Charlie Dog's ecommerce",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "morgan": "^1.6.1",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elviocb/charliedogs.git"
+  },
+  "author": "Elvio Cavalcante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elviocb/charliedogs/issues"
+  },
+  "homepage": "https://github.com/elviocb/charliedogs#readme"
+}
