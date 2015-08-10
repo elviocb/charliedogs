@@ -22,13 +22,21 @@ gulp.task('clean', function cleanPreviousBuild (cb) {
   cb();
 });
 
-gulp.task('copy', ['clean'], function copyMediaFiles (cb) {
+gulp.task('copy', [], function copyMediaFiles (cb) {
   var media = [
     '!'+ config.client +'/assets/styles/**/*',
-    config.client +'/**/*'
+    config.client +'/**/*',
+    'bower_components/angular/angular.min.js', 
+    'bower_components/angular-ui-router/release/angular-ui-router.js'
   ];
+  // var vendors = ['bower_components/angular/angular.min.js', 'bower_components/angular-ui-router/release/angular-ui-router.js'];
+
+ // gulp.src(vendors,  { read: false })
+ //   .pipe(gulp.dest(config.dist + '/src'));
+  
   gulp.src(media)
     .pipe(gulp.dest(config.dist));
+
   cb();
 });
 

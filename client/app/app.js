@@ -9,11 +9,11 @@
         url: '/',
         views: {
           'dogpanel': {
-              templateUrl: 'dogpanel/dog-panel.tpl.html',
+              templateUrl: 'app/dogpanel/dog-panel.html',
               controller: 'DogPanelCtrl'
           }
         },
-        controller: AppController
+        controller: AppCtrl
       });
 
     $urlRouterProvider.otherwise('/');
