@@ -10,6 +10,7 @@ var parser = require('body-parser');
 // Logging and parsing
 app.use(morgan('dev'));
 app.use(parser.json());
+app.use(parser.urlencoded({ extended: true }));
 
 // Configure server
 app.use(express.static(config.static_site_root));

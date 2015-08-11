@@ -3,6 +3,35 @@
 var Dog = require('../models/dog');
 
 exports.addDog = function(req, res, next){
-  console.log('req.body', req.body);
-  console.log('req.params',req.params);
+  // Grab new dog info from the request
+  var dogPost = {
+    race: req.body.race,
+    color: req.body.color,
+    age: req.body.age,
+    price: req.body.price
+  }
+
+  // Make sure all dog's informations is filled;
+  for(var info in dogPost) {
+    if(dogPost[info] === undefined) {
+      console.log('Missing data from addDog:', info);
+      return res.status(401).json({error: 'Missing data: ' + info});
+    }
+  }
+
+  // Check if the dog already exist
+  Dog.forge(dogPost).fetch()
+    .then(function(found){
+      if(found){
+        console.log('Dog already exist: ',found);
+      } // if not save the dog 
+      else {
+        console.log('save new dog');
+        new Dog(dogPost).save().then(function(newDog){
+          console.log('Dog successfuly saved.');
+          res.status(201).json({msg: 'Dog saved', data: newDog});
+        });
+      }
+    });
+  
 };
