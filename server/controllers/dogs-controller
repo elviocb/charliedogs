@@ -1,0 +1,8 @@
+'use strict';
+
+var Dog = require('../models/dog');
+
+exports.addDog = function(req, res, next){
+  console.log('req.body', req.body);
+  console.log('req.params',req.params);
+};
