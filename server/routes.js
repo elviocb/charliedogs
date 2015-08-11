@@ -1,10 +1,11 @@
-'use strict'
+'use strict';
+
+var dogs = require('./controllers/dogs-controller');
+
 
 module.exports = function(app){
   // create a dog
-  app.post('/dogs/new', function(req, res, next){
-    // res.status(200).json('Helllllloooooooo');
-  });
+  app.post('/dogs/new', dogs.addDog);
 
   // fetch all dogs
   app.get('dogs', function(req, res, next){
