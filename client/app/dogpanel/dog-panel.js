@@ -4,6 +4,8 @@
 
   var DogPanelCtrl = function($scope){
 
+    $scope.search = $scope.orderList || '';
+
     $scope.fakeData = [
       {
        race: 'Beagle',

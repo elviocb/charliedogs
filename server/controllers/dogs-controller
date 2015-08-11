@@ -35,3 +35,15 @@ exports.addDog = function(req, res, next){
     });
   
 };
+
+exports.getDogs = function(req, res, next){
+  // Fetch all dogs
+  Dog.forge()
+     .fetch()
+     .then(function(dogs){
+      res.status(200).json({error: false, data: dogs});
+     })
+     .catch(function(err){
+      res.status(500).json({error: true, data: {msg: err.message}});
+     });
+};

@@ -8,9 +8,7 @@ module.exports = function(app){
   app.post('/dogs/new', dogs.addDog);
 
   // fetch all dogs
-  app.get('/dogs', function(req, res, next){
-    res.status(200).json({msg: 'hellooooo'});
-  });
+  app.get('/dogs', dogs.getDogs);
 
   // fetch individual dog by race
   app.get('dogs/:race', function(req, res, next){
