@@ -1,6 +1,7 @@
 'use strict';
 
 var Dog = require('../models/dog');
+var Dogs = require('../collections/dogs');
 
 exports.addDog = function(req, res, next){
   // Grab new dog info from the request
@@ -38,7 +39,9 @@ exports.addDog = function(req, res, next){
 
 exports.getDogs = function(req, res, next){
   // Fetch all dogs
-  Dog.forge()
+  console.log(Dogs);
+
+  Dogs.forge()
      .fetch()
      .then(function(dogs){
       res.status(200).json({error: false, data: dogs});
