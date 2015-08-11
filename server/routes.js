@@ -11,9 +11,7 @@ module.exports = function(app){
   app.get('/dogs', dogs.getDogs);
 
   // fetch individual dog by race
-  app.get('dogs/:race', function(req, res, next){
-    // code here
-  });
+  app.get('/dogs/:race', dogs.getDogsRace);
 
   // create a new order
   app.post('/order/new', function(req, res, next){

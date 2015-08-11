@@ -39,8 +39,6 @@ exports.addDog = function(req, res, next){
 
 exports.getDogs = function(req, res, next){
   // Fetch all dogs
-  console.log(Dogs);
-
   Dogs.forge()
      .fetch()
      .then(function(dogs){
@@ -49,4 +47,21 @@ exports.getDogs = function(req, res, next){
      .catch(function(err){
       res.status(500).json({error: true, data: {msg: err.message}});
      });
+};
+
+exports.getDogsRace = function(req, res, next) {
+  
+  var race = req.params.race; 
+
+  // Fetch all dogs by race
+  Dog.forge()
+     .where({race: race})
+     .fetchAll()
+     .then(function(dogs){
+      res.status(200).json({error: false, data: dogs});
+     })
+     .catch(function(err){
+      res.status(500).json({error: true, data: {msg: err.message}});
+     });
+
 };
