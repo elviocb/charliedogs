@@ -27,7 +27,8 @@
       'ui.router',
       'app.dog-panel',
       'app.nav-bar',
-      'app.common'
+      'app.common',
+      'app.shopping-cart'
   ])
     .config(AppConfig)
     .controller('AppCtrl', AppCtrl);
