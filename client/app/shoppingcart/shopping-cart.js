@@ -2,14 +2,11 @@
 
 (function (angular) {
 
-  var ShoppingCartCtrl = function($scope){
+  var ShoppingCartCtrl = function($scope, $rootScope){
 
-    // Fetch list of dogs from the server
-    FeedFactory
-      .getDogs()
-      .then(function(resp){
-        $scope.dogs = resp.data;
-      });
+    // Control the shopping cart
+    $rootScope.shoppingCart = 0;
+    console.log('rootScope from cart model!!',$rootScope)
 
   };
 
@@ -17,10 +14,7 @@
   // Entry Point
   // ---------------------------------------------------------
 
-  angular.module('app.shopping-cart', [
-    'ui.router',
-    'ui.bootstrap'
-  ])
+  angular.module('app.shopping-cart', [])
   .controller('ShoppingCartCtrl', ShoppingCartCtrl);
 
 })(angular);

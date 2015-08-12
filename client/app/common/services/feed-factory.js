@@ -2,7 +2,6 @@
 (function (angular, _) {
 
   var FeedFactory = function ($http, $location, $window) {
-    var workout;
     var getDogs = function () {
       return $http({
         method: 'GET',
