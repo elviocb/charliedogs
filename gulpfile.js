@@ -24,7 +24,7 @@ gulp.task('clean', function cleanPreviousBuild (cb) {
 
 gulp.task('copy', [], function copyMediaFiles (cb) {
   var media = [
-    '!'+ config.client +'/assets/styles/**/*',
+   // '!'+ config.client +'/assets/styles/**/*',
     config.client +'/**/*',
     'bower_components/angular/angular.min.js', 
     'bower_components/angular-ui-router/release/angular-ui-router.js',
