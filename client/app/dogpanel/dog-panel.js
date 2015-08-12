@@ -4,49 +4,13 @@
 
   var DogPanelCtrl = function($scope, FeedFactory){
 
-    console.log('FeedFactory!!!!!!!!!', FeedFactory);
+    // Fetch list of dogs from the server
+    FeedFactory
+      .getDogs()
+      .then(function(resp){
+        $scope.dogs = resp.data;
+      });
 
-    $scope.search = $scope.orderList || '';
-
-    $scope.fakeData = [
-      {
-       race: 'Beagle',
-       age: '5 anos',
-       color: 'preto',
-       price: '200,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      },{
-       race: 'Boxer',
-       age: '4 meses',
-       color: 'preto',
-       price: '350,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      },{
-       race: 'Bulldog',
-       age: '1 ano',
-       color: 'preto',
-       price: '500,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      },{
-       race: 'Dalmata',
-       age: '2 anos',
-       color: 'preto' ,
-       price: '990,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      },{
-       race: 'Husk Siberiano',
-       age: '4 meses',
-       color: 'preto' ,
-       price: '150,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      },{
-       race: 'Maltês',
-       age: '9 meses',
-       color: 'preto' ,
-       price: '300,00',
-       thumb: 'http://lorempixel.com/200/200/animals/'
-      }
-    ]
   };
 
   // ---------------------------------------------------------

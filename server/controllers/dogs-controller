@@ -9,7 +9,8 @@ exports.addDog = function(req, res, next){
     race: req.body.race,
     color: req.body.color,
     age: req.body.age,
-    price: req.body.price
+    price: req.body.price,
+    thumb: req.body.thumb
   }
 
   // Make sure all dog's informations is filled;
