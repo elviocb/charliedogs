@@ -7,7 +7,7 @@ var Order = db.Model.extend({
   tableName: 'orders',
   hasTimestamps: true,
   dogs: function() {
-    return this.hasMany(Dog);
+    return this.hasOne(Dog);
   }
 });
 

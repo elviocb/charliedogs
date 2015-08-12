@@ -40,10 +40,8 @@ Bookshelf.knex.schema.hasTable('orders').then(function(exists) {
       order.string('client_cpf', 100);
       order.string('client_email', 100);
       order.string('client_address', 500);
-      order.string('race', 100);
-      order.string('color', 100);
-      order.integer('quantity', 100);
-      order.integer('price');
+      order.integer('quantity');
+      order.integer('dog_id').unique();
       order.timestamps();
     }).then(function (table) {
       console.log('Created Table', table);

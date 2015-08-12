@@ -1,6 +1,7 @@
 'use strict';
 
 var dogs = require('./controllers/dogs-controller');
+var orders = require('./controllers/orders-controller');
 
 
 module.exports = function(app){
@@ -14,8 +15,6 @@ module.exports = function(app){
   app.get('/dogs/:race', dogs.getDogsRace);
 
   // create a new order
-  app.post('/order/new', function(req, res, next){
-    // code here
-  });
+  app.post('/orders/new', orders.createOrder);
 
 };
