@@ -4,4 +4,4 @@
 
   angular.module('app.common', []);
 
-})(angular, _);
+})(angular);
