@@ -23,6 +23,7 @@ Bookshelf.knex.schema.hasTable('dogs').then(function(exists) {
       dog.string('race', 100);
       dog.string('color', 100);
       dog.string('age', 100);
+      dog.string('thumb', 500);
       dog.integer('price');
       dog.timestamps();
     }).then(function (table) {
