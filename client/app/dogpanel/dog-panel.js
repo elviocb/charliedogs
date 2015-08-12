@@ -2,7 +2,9 @@
 
 (function (angular) {
 
-  var DogPanelCtrl = function($scope){
+  var DogPanelCtrl = function($scope, FeedFactory){
+
+    console.log('FeedFactory!!!!!!!!!', FeedFactory);
 
     $scope.search = $scope.orderList || '';
 
@@ -53,7 +55,8 @@
 
   angular.module('app.dog-panel', [
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'app.common'
   ])
   .controller('DogPanelCtrl', DogPanelCtrl);
 

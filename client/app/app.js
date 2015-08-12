@@ -26,7 +26,8 @@
     .module('app', [
       'ui.router',
       'app.dog-panel',
-      'app.nav-bar'
+      'app.nav-bar',
+      'app.common'
   ])
     .config(AppConfig)
     .controller('AppCtrl', AppCtrl);
